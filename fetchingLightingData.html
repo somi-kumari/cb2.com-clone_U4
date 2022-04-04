@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/536c9c2fbc.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+
+    <style>
+        #sidebar{
+    /* position: absolute; */
+    overflow-y: scroll;
+    width: 15%;
+    height: 700px;
+    /* border: 1px solid black; */
+    padding:30px;
+    color:#222222;
+color:rgb(34, 34, 34);
+font-size:13px;
+line-height:20px;
+vertical-align:baseline;
+letter-spacing:1.12px;
+word-spacing:0px;
+margin:13px 0px 0px;
+padding:0px 20 0px 50px;
+font-weight:300;
+font-family :"Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+
+line-height: 25px;
+
+font-weight:300;
+font-style:normal;
+font-variant:normal;
+text-transform:none;
+text-decoration:none solid rgb(34, 34, 34);
+text-align:start text-inden;
+
+}
+#sidebar p ,li{
+    cursor: pointer;
+}
+
+#sidebar p:nth-child(19){
+color:red
+}
+
+#sidebar p:hover{
+    border-bottom: 1px solid black;
+width: max-content;
+}
+li{
+    font-size: 11px;
+}
+li:hover{
+    border-bottom: 1px solid black;
+    width: max-content;  
+}
+
+hr{
+    color: gray;
+}
+
+#sub{
+        display: flex;
+    }
+
+    #sub >div:nth-child(1){
+        flex:1.5;
+    }
+    #sub >div:nth-child(2){
+        margin: auto;
+        flex: 8.5;
+        /* border: 1px solid rgb(167, 18, 18); */
+        display:grid;
+grid-template-columns: repeat(3, 30%);
+/* grid-template-rows: repeat(10,1000px); */
+text-align: center;
+grid-gap: 40px;
+/* height: 20px; */
+
+    }
+    #sub >div:nth-child(2) img{
+width: 100%;
+/* border: 1px solid rgb(167, 18, 18); */
+/* height:1000px */
+}
+
+    </style>
+</head>
+
+<body>
+
+    
+        <header>
+
+            <!-- importing from components(navbar) -->
+         </header>
+       
+    
+    <div id="sub" >
+    <div id="sidebar" >
+        <sidebar>
+            
+        </sidebar>
+      </div>
+    <div id="container"></div>
+</div>
+<footer>
+    
+</footer>
+   
+</div>
+
+
+    
+</body>
+</html>
+<script type="module">
+       import navbar from './components/navbar.js'
+    document.querySelector("header").innerHTML=navbar();
+
+
+    import footer from './components/footer.js'
+    document.querySelector("footer").innerHTML=footer();
+
+
+    import sidebar from './components/sidebar.js'
+    document.querySelector("sidebar").innerHTML=sidebar();
+
+    
+// new data......................
+let url = "http://localhost:5000/lighting";
+    let responce = []
+
+    async function getusers() {
+
+    try {
+    let res = await fetch(url);
+     responce = await res.json();
+    // console.log(responce)
+    appendusers(responce)
+    
+    } catch (err) {
+    console.log(err)
+}
+
+}
+
+getusers();
+
+    // let cartArr =JSON.parse(localStorage.getItem("cartitem")) || [];
+     
+    var cartArr= JSON.parse(localStorage.getItem("addTocartPage"))||[];
+
+    appendusers(responce) 
+    
+    function appendusers(responce) {
+        responce.forEach(function(elem) {
+        var div = document.createElement("div");
+
+        var image = document.createElement("img")
+        image.setAttribute("src",elem.img_url);
+
+        image.style.width="100%";
+image.style.height="300px";
+
+
+
+        var d = document.createElement("d");
+        d.textContent=elem.title;
+
+        var p = document.createElement("p");
+    p.textContent = `$${elem.price}`;
+
+    var btn = document.createElement("button");
+    btn.textContent = "Add To Cart";
+    btn.addEventListener("click",function(){
+         addTocart(elem);
+    })
+
+    div.append(image,d,p,btn);
+
+    document.querySelector("#container").append(div);
+        });
+    }
+    
+    // var cartArr= JSON.parse(localStorage.getItem("addTocartPage"))||[];
+    //var cartArr = [];
+
+    function addTocart(el){
+        console.log(el)
+        cartArr.push(el);
+        localStorage.setItem("addTocartPage",JSON.stringify(cartArr));
+        alert("Added to Cart");
+ }
+
+
+
+
+</script>

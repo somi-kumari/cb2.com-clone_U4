@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/sidebar.css">
+    <script src="https://kit.fontawesome.com/536c9c2fbc.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    #newid{
+      width: 350px;
+      height: 250px;
+      margin-left: 10%;
+    }
+    #container{
+        /* height: 500px; */
+        
+        margin: auto;
+        width: 50%;
+        /* overflow: scroll; */
+        border: 1px solid grey;
+        padding: 20px;
+        /* margin-left: 70%; */
+        text-align: center;
+        font-size: 1.5em;
+        display: grid;
+        grid-template-columns: repeat(2,fr);
+    }
+    #container img{
+        width:300px;
+        height: 250px;
+    }
+    h1{
+        display: inline;
+        margin-left: 20%;
+        border: 2px solid gray;
+        /* padding-top: 200px; */
+        padding: 10px;
+        /* height: 10%; */
+        color: blue;
+        font-size: 2.5em;
+    }
+    #hu8y{
+        margin-top: 10%;
+        margin-bottom: 7%;
+        margin-left: 17%;
+    }
+    #cart_btn{
+        width: 200px;
+        height: 50px;
+        background-color: teal;
+        color: white;
+        margin-left: 40%;
+    }
+    
+  </style>
+<body>
+    <header></header>
+    
+    <div id="container">
+
+        
+    </div>
+    <div id="hu8y"><h1></h1></div>
+    <button id="cart_btn" onclick="location.href='checkout.html'">GO TO PAYMENT</button>
+    <footer></footer>
+</body>
+</html>
+<script >
+    var cartArr= JSON.parse(localStorage.getItem("addTocartPage"));
+    // console.log(cartArr);
+    cartArr.map(function(el){
+        div= document.createElement("div");
+
+let name =document.createElement("p");
+let image =document.createElement("img");
+// image.id = 'newid';
+let price =document.createElement("p");
+image.src=el.img_url;
+name.innerText =el.title;
+price.innerText =el.price;
+div.append(image,name,price);
+document.querySelector("#container").append(div);
+    })
+    var total =cartArr.reduce(function (acc,cv){
+        return acc+Number(cv.price)
+    },0)
+    console.log(total)
+    document.querySelector("h1").innerHTML=`your total amount is $ ${total}`
+
+    localStorage.setItem("total_value",JSON.stringify(total));
+</script>
+
+
+<script type="module">
+ import navbar from "./components/navbar.js"
+  document.querySelector("header").innerHTML=navbar();
+
+  import footer from './components/footer.js'
+    document.querySelector("footer").innerHTML=footer();
+</script>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://kit.fontawesome.com/536c9c2fbc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/navbar.css">  
+    <link rel="stylesheet" href="./styles/footer.css">  
+</head>
+<body>
+  
+    <header>
+
+    </header>
+    <hr>
+    <select id="select">
+      <option value="">Sort Value</option>
+      <option value="High">Low-heigh</option>
+      <option value="Low">High-Low</option>
+    </select>
+<div id="container">
+<div id="sidebar">
+    <sidebar>
+            
+    </sidebar>
+</div>
+<div id="right_bax">
+<div id="pillow_page"></div>
+    <div id="pillow2"></div>
+</div>
+
+</div>
+
+<footer>
+
+</footer>
+</body>
+</html>
+<script type="module">
+       import navbar from './components/navbar.js'
+    document.querySelector("header").innerHTML=navbar();
+
+
+ 
+    import footer from './components/footer.js'
+    document.querySelector("footer").innerHTML=footer();
+
+
+    import sidebar from './components/sidebar.js'
+    document.querySelector("sidebar").innerHTML=sidebar();
+//......................for middle part.....................//
+
+// import middlePart from "./components/middle.js"
+// let middlePart_div  = document.getElementById("middlePart");
+// middlePart_div.innerHTML =middlePart();
+// console.log("middlePart",middlePart)
+
+
+
+
+
+//......................for footer part.....................//
+
+// import footer from "./components/footer.js"
+// let footer_div  = document.getElementById("footer");
+// footer_div.innerHTML =footer();
+// console.log("footerPart",footer)
+
+let url = "http://localhost:5000/pillow";
+    let responce = []
+
+    async function getusers() {
+
+    try {
+    let res = await fetch(url);
+     responce = await res.json();
+    // console.log(responce)
+    appendusers(responce)
+    
+    } catch (err) {
+    console.log(err)
+}
+
+}
+
+getusers();
+
+    // let cartArr =JSON.parse(localStorage.getItem("cartitem")) || [];
+    var cartArr= JSON.parse(localStorage.getItem("addTocartPage"))||[];
+
+    appendusers(responce) 
+    
+// end..........................
+
+
+ 
+  function appendusers(responce) {
+    document.querySelector("#pillow_page").innerHTML="";
+        responce.forEach(function(el) {
+  
+       let div= document.createElement("div");
+       div.innerHTML="";
+let name =document.createElement("p");
+let price =document.createElement("p");
+let image =document.createElement("img");
+let button =document.createElement("button");
+button.setAttribute("id","button");
+button.innerHTML="ADD TO CART";
+button.addEventListener("click",function(){
+  addTocart(el);
+})
+image.src=el.img_url;
+name.innerText =el.title;
+price.innerText=`$${el.price}`;
+div.append(image,name ,price,button);
+// console.log("div",div)
+document.querySelector("#pillow_page").append(div);
+
+});
+}
+
+
+document.querySelector("#select").addEventListener("click",function(){
+  //window.location.href="PILLOWS&THROWS.html";
+  let Sortprice = document.querySelector("#select").value;
+  console.log("Select",Sortprice);
+  if(Sortprice =="High"){
+    data.sort(function(a,b){
+      return Number(a.price) -Number(b.price)
+      pillowData(data);
+    })
+  }
+  if(Sortprice =="Low"){
+    data.sort(function(a,b){
+      return  Number(b.price)-Number(a.price);
+    })
+  }
+  console.log("Sortprice", data);
+pillowData(data);
+});
+
+//................. add To cart function ....................
+    function addTocart(el){
+        console.log(el)
+        cartArr.push(el);
+        localStorage.setItem("addTocartPage",JSON.stringify(cartArr));
+        alert("Added to Cart");
+ }
+
+let end_url = "http://localhost:5000/landing";
+    let end_responce = []
+
+    async function end_getusers() {
+
+    try {
+    let res = await fetch(end_url);
+     end_responce = await res.json();
+    console.log("responce",end_responce)
+    end_appendusers(end_responce)
+    
+    } 
+    catch (err) 
+    {
+    console.log(err)
+    }}
+    end_getusers();
+
+
+
+    function end_appendusers(end_responce) {
+      end_responce.forEach(function(el) {
+      let  div= document.createElement("div");
+let name =document.createElement("p");
+// let title =document.createElement("p");
+let image =document.createElement("img");
+image.src=el.img_url;
+name.innerText =el.title;
+// title.innerText =el.title;
+div.append(image,name);
+console.log("div",div)
+document.querySelector("#pillow2").append(div);
+
+});
+}
+// pillowData1();
+
+
+
+// //................. sort price function .....................//
+
+
+
+
+
+
+
+
+
+// document.querySelector("#view").addEventListener("click",function(){
+//   window.location.href="PILLOWS&THROWS.html";
+// });
+// document.querySelector("#poufs").addEventListener("click",function(){
+//   window.location.href="poufs.html";
+// });
+// document.querySelector("#pillows").addEventListener("click",function(){
+//   window.location.href="pillows.html";
+// });
+</script>

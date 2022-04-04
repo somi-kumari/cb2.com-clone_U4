@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/fetchingFurnitureData.css" />
+    <title>CB2productDetailsFurniture</title>
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/sidebar.css" />
+    <script
+      src="https://kit.fontawesome.com/536c9c2fbc.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      #conatiner_furnituresomi {
+        display: flex;
+      }
+      #conatiner_furnituresomi > div:nth-child(2) {
+        margin: auto;
+        flex: 8.5;
+        /* border: 1px solid rgb(167, 18, 18); */
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        /* grid-template-rows: repeat(10,1000px); */
+        text-align: center;
+        grid-gap: 40px;
+        /* height: 20px; */
+      }
+      #conatiner_furnituresomi > div:nth-child(2) img {
+        width: 100%;
+        /* border: 1px solid rgb(167, 18, 18); */
+        /* height:1000px */
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <div id="conatiner_furnituresomi">
+      <div id="sidebar_box"></div>
+      <div id="users_div"></div>
+    </div>
+
+    <footer></footer>
+  </body>
+</html>
+<script>
+  // function openNav() {
+  //   document.getElementById("mySidenav").style.width = "250px";
+  // }
+
+  // function closeNav() {
+  //   document.getElementById("mySidenav").style.width = "0";
+  // }
+
+  let url = "http://localhost:5000/furnitures";
+  let responce = [];
+
+  async function getusers() {
+    try {
+      let res = await fetch(url);
+      responce = await res.json();
+      // console.log(responce)
+      appendusers(responce);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  getusers();
+
+  // let cartArr = JSON.parse(localStorage.getItem("cartitem"))||[];
+  var cartArr= JSON.parse(localStorage.getItem("addTocartPage"))||[];
+
+  appendusers(responce);
+
+  function appendusers(responce) {
+    responce.forEach(function (product) {
+      let img = document.createElement("img");
+      img.src = product.img_url;
+
+      let name = document.createElement("p");
+      name.innerText = product.title;
+
+      let price = document.createElement("h4");
+      price.setAttribute("id", price);
+      price.innerText = product.price;
+
+      let div = document.createElement("div");
+      var btn = document.createElement("button");
+    btn.textContent = "Add To Cart";
+    btn.addEventListener("click",function(){
+         addTocart(product);
+    })
+
+      div.append(img, name, price,btn);
+
+      users_div.append(div);
+    });
+  }
+
+
+
+    //var cartArr = [];
+ 
+    function addTocart(el){
+        console.log(el)
+        cartArr.push(el);
+        localStorage.setItem("addTocartPage",JSON.stringify(cartArr));
+        alert("Added to Cart");
+ }
+
+</script>
+<script type="module">
+  import navbar from "./components/navbar.js";
+  document.querySelector("header").innerHTML = navbar();
+
+  import footer from "./components/footer.js";
+  document.querySelector("footer").innerHTML = footer();
+
+  import sidebar from "./components/sidebar.js";
+  document.getElementById("sidebar_box").innerHTML = sidebar();
+</script>
