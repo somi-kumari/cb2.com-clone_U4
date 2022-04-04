@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/536c9c2fbc.js" crossorigin="anonymous"></script>
+    
+</head>
+<link rel="stylesheet" href="/styles/navbar.css">
+<link rel="stylesheet" href="/styles/home.css">
+<link rel="stylesheet" href="/styles/footer.css">
+<link rel="stylesheet" href="/styles/sidebar.css">
+<style> 
+   .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #3e3838;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+</style> 
+
+<body>
+    <header>
+      
+       <div id="leftheader" >
+        <div id="options">
+    
+              
+    <div id="mySidenav" class="sidenav" style="padding-left: 15px;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+       
+        <a href="#"> NEW</a>
+    <p onclick="window.location.href='fetchingFurnitureData.html'">FURNITURE</p>
+    <li onclick="window.location.href='fetchingFurnitureData.html'" >LIVING ROOM FURNITURE</li>
+    <p onclick="window.location.href='fetchingLightingData.html'">LIGHTING</p>
+    <li onclick="window.location.href='fetchingLightingData.html'">VIEW ALL</li>
+    <p>PILLOWS & THROWS</p>
+  <li  onclick="window.location.href='fetchingPillowData.html'"  id="view">  VIEW ALL</li>
+<li   onclick="window.location.href='fetchingPillowData.html'" id="pillows">PILLOWS</li>
+<li onclick="window.location.href='fetchingPillowData.html'"  id="poufs">POUFS</li>
+<li onclick="window.location.href='fetchingPillowData.html'" >BEST SELLERS</li>
+<p>DECOR & MIRRORS</p>
+    <li>MIRRORS</li>
+<li>HOME ACCESSORIES</li>
+<li>ART & WALL DECOR</li>
+    <p>RUGS</p>
+    <p>KITCHEN & DINING</p>
+    <p>BEDDING & BATH</p>
+    <p>OUTDOOR</p>
+    <p>    GIFTS</p>
+    <p>SALE & OFFERS</p>
+    <p>    KRAVITZ DESIGN</p>
+    <p>  COLLABORATIONS</p>
+    <p> IDEAS & INSPIRATION</p>
+    <p>  FREE DESIGN SERVICES</p>
+    <p>   TRADE PROGRAM
+    </p>
+    <p></p>
+          </div>
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span> 
+            </i>    
+        </div>
+        <div id="search">
+            <i class="fa-solid fa-magnifying-glass fa-2x"></i>
+            <input id="searchbar" type="search">
+        </div>
+        
+    </div>
+    <div id="logo">
+        <img src="https://www.stpaulcollection.com/wp-content/uploads/2018/11/st-paul-collection-amenities-cb2.png" alt="">
+    </div>
+    <div id="rightheader">
+        <ul>
+            <li>
+                <div>
+                    <i class="fa-solid fa-location-dot fa-2x"></i>
+                </div>
+            </li>
+            <li>
+                <div id="user">
+                    <i class="fa-solid fa-user fa-2x">
+                     </i>
+                    <div aria-hidden="true" id="user-div">
+                        <div> <a href="signup.html" >Sign Up</a></div>
+                        <div>ORDER TRACKING</div>
+                        <div>SCHEDULE DELIVERY</div>
+                        <div>CB2 CREDIT CARD</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div id="whishlist">
+                    <i class="fa-solid fa-heart fa-2x"></i>
+                    <div aria-hidden="true" id="whishlist-div">
+                        <div>SOMETHING CATCHING YOUR EYE?</div>
+                        <div>
+                            <span style="text-decoration: underline;">Sign in</span> to see items you may have added using another computer or device.
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <i class="fa-solid fa-cart-shopping fa-2x"  onclick="window.location.href='cart.html'"></i>
+                    <span id ="cart-count"></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    </header>
+
+    <div id="video">
+        <div>
+            <video width="100%" preload="auto" src="https://cb2.scene7.com/is/content/CB2/video/BrazilHomepage_v1_optimized.mp4" loop autoplay muted></video>
+        </div>
+        <div id="videotext">
+            <p id="videotextp1">BRAZILLIAN RHAPSODY</p>
+            <P id="videotextp2">SHOP THE LOOK</P>
+        </div>
+        
+    </div>
+    <div id="febarrival">
+        <div>
+            <img width="100%" src="https://cb2.scene7.com/is/image/CB2/012722_home_feb_arrivals?wid=1920&qlt=40,0&op_sharpen=1" alt="">
+        </div>
+        <div id="febarrival-text">
+            <p id="febtext1">FEBRAURY</p>
+            <p id="febtext1">ARRIVALS</p>
+            <p id="febtext3">SHOP NOW</p>
+        </div>
+    </div>
+    <div id="newtosale">
+        <div>
+            <img width="100%" src="https://cb2.scene7.com/is/image/CB2/012722_home_sale?wid=1920&qlt=40,0&op_sharpen=1" alt="">
+        </div>
+        <div id="newtosaletext">
+            <p id="newtext1">NEW TO SALE</p>
+            <p id="newtext2">UP TO 60% OFF</p>
+        </div>
+    </div>
+    <div id="backinstock">
+        <div>
+            <img width="100%" src="https://cb2.scene7.com/is/image/CB2/012722_home_stock?wid=1920&qlt=40,0&op_sharpen=1" alt="">
+        </div>
+        <div id="backinstock-text">
+            <p id="newtext1">BACK IN STOCK</p>
+            <p id="newtext2">SHOP NOW</p>
+        </div>
+    </div>
+    <div id="radar">
+        <h3>ON OUR RADAR</h3>
+        <div id="radar-container">
+            <!-- get from dom -->
+        </div>
+    </div>
+    <footer>
+            <!-- importing from components(footer) -->
+    </footer>
+</body>
+</html>
+
+<script>
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+    let url = "http://localhost:5000/landing";
+    let responce = []
+
+    async function getusers() {
+
+    try {
+    let res = await fetch(url);
+     responce = await res.json();
+    console.log("responce",responce)
+    appendusers(responce)
+    
+    } 
+    catch (err) 
+    {
+    console.log(err)
+    }}
+    getusers();
+   
+
+    function appendusers(responce) {
+        responce.forEach(function(el) {
+
+ let  div= document.createElement("div");
+// let name =document.createElement("p");
+let title =document.createElement("p");
+let image =document.createElement("img");
+image.src=el. img_url;
+// name.innerText =el.name;
+title.innerText =el.title;
+div.append(image,title);
+// console.log("div",div)
+// document.querySelector("#pillow2").append(div);
+document.getElementById("radar-container").append(div);
+
+});
+}
+
+    
+    // The below is for options functionality
+    
+    const targetdiv = document.getElementById("sidebox");
+    document.getElementById("options").addEventListener("click",function(){
+        if(targetdiv.style.display==="none"){
+            targetdiv.style.display="block";
+        }
+        else{
+            targetdiv.style.display="none";
+        }
+    })
+    
+
+</script>
+<script type="module">
+
+   
+
+    import footer from './components/footer.js'
+    document.querySelector("footer").innerHTML=footer();
+
+    
+   
+
+</script>

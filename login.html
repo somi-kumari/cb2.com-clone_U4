@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/536c9c2fbc.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="/styles/footer.css"> -->
+    <link rel="stylesheet" href="/styles/login.css">
+
+     
+    <!-- <link rel="stylesheet" href="/styles/navbar.css"> -->
+</head>
+<body>
+    
+<div>
+    
+    <header>
+   
+
+        <!-- importing from components(navbar) -->
+     </header>
+
+     </div>
+    </div>
+     <hr style="width: 95%; bottom: rgb(210,210,210); "  >
+     <div id="main">
+         <div id="box1">
+            <div> 
+                <h3  > SIGN IN</h3>
+                <h5 style="margin-left: 60%;" > Reset password</h5>
+            </div>
+            <div>
+             <form> 
+                  <h4>Email</h4>
+                  <div id="name">
+       <input  id="usr" type="text" placeholder="Enter username" />
+                    </div>
+                    <h4>password</h4> 
+                    <div id="name">
+     
+     
+                        <input id="pass" type="password" placeholder="Enter password" />
+                   
+                      </div>
+                  
+                  <input type="submit" id="btn" value="login"/>
+                </form>
+                  <h4 style="margin-left: 44%;">or</h4>
+                  
+                  <div  id="p" type = "submit" name = "learn" value = "myimage">
+                      <img style="width: 15%;" src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png" alt="">
+                      <p>SIGN IN WITH GOOGLE</p>
+                
+              </div>
+             <h5 style="font-size: 15px;">By signing in, you are agreeing to our <a href="https://www.cb2.com/customer-service/terms-of-use">Terms of use</a> and <a href="https://www.cb2.com/customer-service/terms-of-use">Privacy Policy.</a></h5>
+         </div>
+         <div class="vl"></div>
+
+         <div id="box2">
+             <h2 style="    padding: 0;
+             margin: 20px 0;
+             color: #222">CREATE AN ACCOUNT</h2>
+             <ul style="margin-top: 20%;">
+                 <li id="list" >Option to save payments to view in store orders</li>
+                 <li id="list" >Easily redeem rewards</li>
+                 <li id="list" >Speedy checkout</li>
+                 <li id="list" >Easily track and view order history </li>
+                 
+             </ul>
+              
+    <button id="btn" onclick="myfunction()">CREATE ACCOUNT</button>           
+
+         </div>
+
+
+
+     </div>
+     <footer>
+        <!-- importing from components(footer) -->
+</footer>
+   
+    
+</body>
+
+</html>
+<script type="module">
+document.querySelector("form").addEventListener("submit", signin);
+
+// var regdUsers = JSON.parse(localStorage.getItem("userDataBase"))||[];
+
+async function signin(event) {
+  event.preventDefault();
+
+
+
+  try{
+    var password = document.querySelector("#pass").value;
+  var  email = document.querySelector("#usr").value;
+      let mail = {email: email,
+                  password: password}
+                let response = await fetch("http://localhost:5000/login",{
+                method:"POST",
+                body:JSON.stringify(mail),
+                headers:{
+                    'Content-Type': 'application/json'
+                }
+            })
+            let data = await response.json()
+            console.log(data)
+            localStorage.setItem("userInfo",JSON.stringify(data))
+            if(!data.message){
+  alert("Registration Success");
+  localStorage.setItem("userInfo",JSON.stringify(data))
+  // localStorage.setItem("token",JSON.stringify(data.token))
+  window.location.href = "landingPage.html";
+}
+else{
+  alert(data.message);
+  window.location.href = "signup.html"
+}
+console.log(data);
+
+    }catch(err){
+        console.log(err)
+    }
+
+}
+</script>
