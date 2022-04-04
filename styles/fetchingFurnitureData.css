@@ -1,0 +1,13 @@
+#users_div{
+
+    display:grid;
+    grid-template-columns: repeat(4, 25%);
+    text-align: center;
+    
+
+    
+}
+#users_div img{
+    width: 60%;
+    height:60%
+   }

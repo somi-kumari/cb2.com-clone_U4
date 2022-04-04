@@ -1,0 +1,142 @@
+#video{
+    /* position: absolute; */
+    position: relative;
+   cursor: pointer; 
+   border-bottom: 5px solid white;
+}
+#videotext{
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 35%;
+    text-align: center;
+    height: 900px;
+}
+#videotextp1{
+    letter-spacing: 0.3em;
+    font-family: "Bodoni Sans Regular",Calibri,Helvetica,Arial,sans-serif;
+    font-weight: 300;
+    color: black;
+    font-size: 40px;
+    z-index: 10;
+}
+#videotextp2{
+    margin: 0;
+    display: inline;
+    letter-spacing: 0.05em;
+    font-family: "Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+    font-weight: 100;
+    color: rgb(87, 83, 83);
+    font-size: 20px;
+    border-bottom: 1px solid #222;
+}
+
+
+
+#febarrival{
+    /* height: 960px; */
+    position: relative;
+    cursor: pointer;
+    border-bottom: 5px solid white;
+}
+#febarrival-text{
+    width: 100%;
+    position: absolute;
+    top: 9%;
+
+    text-align: center;
+
+}
+#febtext1{
+    color: white;
+    letter-spacing: 0.2em;
+    font-family: "Bodoni Sans Regular",Calibri,Helvetica,Arial,sans-serif;
+    font-size: 60px;
+    margin: 0px;
+    font-weight: 300;
+}
+#febtext3{
+    display: inline;
+    color: white;
+    letter-spacing: 0.05em;
+    font-family: "Bodoni Sans Regular",Calibri,Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    margin: 0px;
+    font-weight: 300;
+    margin-bottom: 2px;
+    border-bottom: 1px solid white;
+}
+
+#newtosale{
+    position: relative;
+    border-bottom: 5px solid white;
+}
+#newtosaletext{
+    width: 100%;
+    color: white;
+    position: absolute;
+    top: 40%;
+    text-align: center;
+}
+#newtext1{
+    color: white;
+    letter-spacing: 0.2em;
+    font-family: "Bodoni Sans Regular",Calibri,Helvetica,Arial,sans-serif;
+    font-size: 60px;
+    margin: 0px;
+    font-weight: 300;
+}
+#newtext2{
+    display: inline;
+    color: white;
+    letter-spacing: 0.05em;
+    font-family: "Bodoni Sans Regular",Calibri,Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    margin: 0px;
+    font-weight: 300;
+    border-bottom: 1px solid white;
+}
+
+#backinstock{
+    position: relative;
+    border-bottom: 5px solid white;
+}
+#backinstock-text{
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+}
+
+#radar{
+    width: 70%;
+    /* margin: auto; */
+    margin-top: 75px;
+}
+
+#radar-container{
+    padding: 10px 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+#radar-container>div>img{
+    width: 330px;
+}
+#radar-underline{
+    text-decoration: underline;
+    color: #868585;
+    font-size: 12px;
+    font-family: "Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+#radar-title{
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-family: "Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+}
+
+

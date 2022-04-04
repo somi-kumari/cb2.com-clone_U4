@@ -1,0 +1,117 @@
+header{
+    width: 100%;
+    height: 124px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* border: 1px solid red; */
+    /* position: fixed; */
+}
+#leftheader{
+    display: flex;
+    gap: 30px;
+    margin:auto;
+    margin-left: 50px;
+    /* border: 1px solid red; */
+    padding: 5px;
+}
+#search{
+    display: flex;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+   
+}
+#searchbar{
+    display: block;
+    height: 100%;
+    border: none;
+}
+#logo{
+    margin: auto;
+}
+#logo>img{
+    width: 110px;
+    margin: auto;
+    cursor: pointer;
+}
+#rightheader{
+    /* border: 1px solid red; */
+    margin-right: 50px;
+    margin: auto;
+    margin-right: 30px;
+}
+#rightheader>ul{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin: auto;
+    list-style-type: none;
+
+}
+li>div{
+    /* border: 1px solid red; */
+    padding: 10px 5px;
+    margin: auto;
+    cursor: pointer;
+}
+li>div:hover{
+    border-bottom: 1px solid black;
+}
+#options{
+    cursor: pointer;
+}
+
+
+#user-div{
+    margin-top: 12px;
+    z-index: 999;
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 1000px;
+    top: 90px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 0px;
+    padding: 36px 25px;
+    letter-spacing: 2px;
+    color: rgb(126, 126, 126);
+    font-family: "Bodoni Sans Regular",Calibri,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    display: none;
+}
+#user-div>div, #whishlist-div>div{
+    margin-bottom: 10px;
+}
+
+#user:hover #user-div {
+    display: block;
+    z-index: 10;
+    
+}
+
+#whishlist-div{
+    width: 10%;
+   
+    z-index: 999;
+    border: 1px solid red;
+    position: absolute;
+    left: 1280px;
+    top: 90px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 0px;
+    padding: 36px 25px;
+    letter-spacing: 2px;
+    color: rgb(126, 126, 126);
+    font-family: "Bodoni Sans Regular",Calibri,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    display: none;
+}
+
+#whishlist:hover #whishlist-div{
+    display: block;
+}
+
+#user-div:hover,#whistlist-div:hover{
+    cursor: pointer;
+}

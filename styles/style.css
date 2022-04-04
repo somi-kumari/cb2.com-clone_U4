@@ -1,0 +1,305 @@
+body{
+    background-color: #ffffff;
+}
+#container{
+display: flex;
+font-family :"Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+Font :Verdana;
+font-size:14px;
+font-weight:300;
+font-style:normal;
+font-variant:normal;
+text-transform:none;
+text-decoration:none solid rgb(34, 34, 34);
+text-indent:0px;
+}
+
+#top{
+    font-family :"Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+    Font : Verdana;
+    font-size: 24px;
+    line-height:20px;
+vertical-align:baseline;
+letter-spacing:2px;
+word-spacing:0px;
+margin:0px;
+padding:43px 0;
+color:#222222;
+color:rgb(34, 34, 34);
+
+}
+/* ..........................sidebar_data......................... */
+#sidebar{
+    /* position: absolute; */
+    overflow-y: scroll;
+    width: 15%;
+    height: 700px;
+    /* border: 1px solid black; */
+    padding:30px;
+    color:#222222;
+color:rgb(34, 34, 34);
+font-size:13px;
+line-height:20px;
+vertical-align:baseline;
+letter-spacing:1.12px;
+word-spacing:0px;
+margin:13px 0px 0px;
+padding:0px 20 0px 50px;
+font-weight:300;
+font-family :"Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+
+line-height: 25px;
+
+font-weight:300;
+font-style:normal;
+font-variant:normal;
+text-transform:none;
+text-decoration:none solid rgb(34, 34, 34);
+text-align:start text-inden;
+
+}
+#sidebar p ,li{
+    cursor: pointer;
+}
+
+#sidebar p:nth-child(19){
+color:red
+}
+
+#sidebar p:hover{
+    border-bottom: 1px solid black;
+width: max-content;
+}
+li{
+    font-size: 11px;
+}
+li:hover{
+    border-bottom: 1px solid black;
+    width: max-content;  
+}
+
+hr{
+    color: gray;
+}
+
+/* ..................end of sidebar ........................ */
+#pillow{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,450px);
+    /* border:1px solid black; */
+    grid-gap:  30px ;
+    /* margin: 30px 0; */
+}
+#pillow>div{
+    cursor: pointer;
+}
+#pillow img{
+    width: 100%;
+    height: 90%;
+}
+#pillow_box{
+    font-size: 20px;
+margin:90px  auto ;
+width: 100%;
+height: 150px;
+border:2px solid black;
+text-align: center;
+font-family :"Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+Font :Verdana;
+font-size:14px;
+font-weight:300;
+font-style:normal;
+font-variant:normal;
+text-transform:none;
+text-decoration:none solid rgb(34, 34, 34);
+text-indent:0px;
+cursor: pointer;
+}#pillow_box>p:nth-child(1){
+font-size: 20px;
+}
+#pillow_box>p:nth-child(3){
+border-bottom: 1px solid black;
+width: max-content;
+margin-left: 43%;
+
+}
+#pillow_box:hover{
+text-decoration: dashed ;
+border-spacing: 2px solid rgb(192, 0, 0);
+}
+button{
+padding: 5px 15px;
+border: 1px solid rgb(207, 204, 204);
+font-size: 13px;
+color: #535151;
+}
+button:hover{
+    border: 1px solid rgb(19, 18, 18);
+    color: black;
+}
+
+/*.............. line part..... */
+#line{
+display: flex;
+}
+#line >hr{
+  
+width: 82.5%;
+height: 0;
+margin: 25px 0;
+
+}
+
+/* .......................right_box Part ........................*/
+
+
+#select{
+margin-left: 85%;
+width: 120px;
+height: 30px;
+border: 1px solid transparent;
+font-size: 17px;
+}
+/* #select>option:nth-child(1){
+    font-size: 20px;
+} */
+
+#select:hover{
+font-size: 15px;
+border: 1px solid gray;
+}
+textarea:focus,
+select:focus {
+  outline: none;
+  font-size: 20px;
+}
+#pillow2{
+width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(1,400px);
+    /* border:1px solid black; */
+    grid-gap:  30px ;
+   font-size: 14px;
+   line-height:18px;
+ 
+}
+#our{
+    line-height:22.2902px;
+   vertical-align:baseline;
+letter-spacing:1.62902px;
+color:#222222;
+color:rgb(34, 34, 34);
+font-size:16.2902px;
+margin-right: 25px;
+}
+#pillow2>div{
+    cursor: pointer;
+}
+#pillow2 img{
+    width: 100%;
+    height: 80%;
+}
+#pillow2 p:nth-child(3){
+    border-bottom: 1px solid black;
+width: max-content;
+color:#222222;
+color:rgb(34, 34, 34);
+font-size:12px;
+line-height:18px;
+
+}
+
+
+
+#right_bax{
+width:85%;
+padding: 30px;
+/* border: 1px solid ; */
+}
+/* //...............middle part......................... */
+
+#detail{
+display: flex;
+margin-top: 120px;
+font-size: 12px;
+}
+#detail>div{
+margin-right: 40px; 
+width: 30%; 
+line-height: 13px;
+color:#222222;
+color:rgb(34, 34, 34)
+}
+#detail p:nth-child(1){
+font-size: 15px;
+font-weight: 400px;
+color: black;
+}
+#detail p:last-child{
+font-size: 13px;
+border-bottom: 1px solid black;
+width: max-content;
+/* color: black; */
+}
+#detail p:hover{
+border-bottom: 1px solid black;
+width: max-content;
+color: black;
+cursor: pointer;
+}
+
+
+
+/* ............pillow_pade css data .............................. */
+
+#pillow_page{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,320px);
+    height: 1000px;
+    grid-gap: 4%;
+    padding:10px;
+    margin-bottom: 100px;
+   /* border: 1px solid black; */
+}
+#pillow_page img{
+    width: 100%;
+    height: 63%;
+}
+#pillow_page>div{
+    /* color:red; */
+    line-height: 18px;
+    /* border: 1px solid black; */
+}
+
+
+/* ............................CATEGORIES_part............................. */
+#CATEGORIES{
+display: flex;
+font-size: 11px;
+margin: 50px 0;
+color:#222222;
+color:rgb(34, 34, 34)
+}
+#CATEGORIES p{
+margin-left: 40px;
+border-bottom: 1px solid black;
+margin-bottom: 0;
+width: max-content;
+cursor: pointer;
+}
+#CATEGORIES p:nth-child(1){
+font-size: 14px;
+border-bottom: 1px solid transparent;
+margin: 0;
+color: black;
+cursor:default;
+}
+#p{
+color:#222222;
+color:rgb(34, 34, 34);
+font-size:12px;
+line-height:18px
+}

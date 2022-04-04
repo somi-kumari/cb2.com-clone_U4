@@ -1,0 +1,53 @@
+/* ..........................sidebar_data......................... */
+#sidebar{
+    /* position: absolute; */
+    overflow-y: scroll;
+    width: 15%;
+    height: 700px;
+    /* border: 1px solid black; */
+    padding:30px;
+    color:#222222;
+color:rgb(34, 34, 34);
+font-size:13px;
+line-height:20px;
+vertical-align:baseline;
+letter-spacing:1.12px;
+word-spacing:0px;
+margin:13px 0px 0px;
+padding:0px 20 0px 50px;
+font-weight:300;
+font-family :"Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+
+line-height: 25px;
+
+font-weight:300;
+font-style:normal;
+font-variant:normal;
+text-transform:none;
+text-decoration:none solid rgb(34, 34, 34);
+text-align:start text-inden;
+
+}
+#sidebar p ,li{
+    cursor: pointer;
+}
+
+#sidebar p:nth-child(19){
+color:red
+}
+
+#sidebar p:hover{
+    border-bottom: 1px solid black;
+width: max-content;
+}
+li{
+    font-size: 11px;
+}
+li:hover{
+    border-bottom: 1px solid black;
+    width: max-content;  
+}
+
+hr{
+    color: gray;
+}

@@ -1,0 +1,68 @@
+footer{
+    margin-top: 75px;
+    background-color: #f7f7f7;
+    padding: 75px 0px;
+    font-family: "Lineto Brown Sub", "Lineto Brown Light Sub", Verdana,
+}
+
+#footer-content{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 25px;
+}
+
+#footer-topleft>div{
+    margin-bottom: 40px;
+}
+
+input{
+    width: 85%;
+    display: block;
+    padding: 15px;
+    border: none;
+    background-color: #f7f7f7;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+
+#footer-icons{
+    display: flex;
+    gap: 20px;
+}
+
+#footer-topright{
+    display: flex;
+    gap: 80px;
+}
+
+#footer-topright>div:nth-child(2){
+    width: 20%;
+    /* border: 1px solid red; */
+}
+ul{
+    list-style-type: none;
+    text-align: left;
+    padding: 0px;
+    border: 0px;
+    font-family: "Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+    font-weight: 200;
+}
+li{
+    margin-bottom: 10px;
+    color: rgb(128, 124, 124);
+    /* border: 1px solid red; */
+    font-family: "Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+    font-size: 12px;
+    
+}
+
+div>span{
+    font-weight: 50;
+    font-size: 14px;
+}
+
+#ftr4>div{
+    margin-bottom: 15px;
+}

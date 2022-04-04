@@ -1,0 +1,81 @@
+#main{
+    display: flex;
+
+}
+#box1{
+    width: 20%;
+    height:40%;
+    margin-top: 3%;
+
+margin-left:28%;
+
+}
+#box2{
+    width: 23%;
+    height: 400px;
+    
+    margin-right:28%;
+    margin-left: 2%;
+    margin-top: 7%;
+}
+.vl {
+    margin-left: 50px;
+    margin-top: 7%;
+border-left: 2px solid rgb(227,227,227);
+height: 400px;
+}
+#btn{
+background-color: rgb(17, 17, 17);
+width: 100%;
+height: 30px;
+color: white;
+font-size: larger;
+}
+#p{
+width: 100%;
+display: flex;
+border: 2px solid black;
+}
+#usr{
+width: 90%;
+/* height: 30px; */
+border: 1px solid black;
+margin-bottom: 5%;
+
+}
+#pass{
+width: 90%;
+
+border: 2px solid black;
+margin-bottom: 5%;
+
+}
+a{
+color:rgba(22, 21, 21, 0.904);
+}
+#list{
+margin-top: 20px;
+
+}
+input{
+    height: 25px;
+    text-align: center;
+    /* width: 4000px; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
