@@ -21,4 +21,29 @@ Better interconnect and reusability of code.
 Got a clear understanding of Unit 4 concepts.
 Working in a team efficiently and listening to teammates so collaboration can be seamless.
 
+Deploy link
+https://cb2clone.netlify.app/
+
+screenshot of our page:- 
+HOME PAGE
+<img width="100%" src="https://i.postimg.cc/vHHChjZy/Screenshot-182.png?s=fit&w=1024&h=720"></img>\
+
+
+SIGNUP/LOGIN
+
+<img width="100%" src="https://i.postimg.cc/pXwYrh7S/Screenshot-183.png?s=fit&w=1024&h=720"></img>\
+
+PRODUCT PAGE
+
+<img width="100%" src="https://i.postimg.cc/xdtzvcxn/Screenshot-184.png?s=fit&w=1024&h=720"></img>\
+
+CART PAGE
+
+<img width="100%" src="https://i.postimg.cc/T1mjJT50/Screenshot-186.png"></img>\
+
+PAYMENT PAGE
+
+<img width="100%" src="https://i.postimg.cc/5NSL47BX/Screenshot-187.png"></img>\
+
+
 
